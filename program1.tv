@@ -1,0 +1,25 @@
+class TVChannel:
+    def __init__(self, name, viewers, viewing_time):
+        self.name = name
+        self.viewers = viewers
+        self.viewing_time = viewing_time
+
+    def rate_channel(self):
+        return self.viewers
+
+# Create a list of TV channels
+channels = []
+for i in range(10):
+    name = input("Enter channel name: ")
+    viewers = int(input("Enter number of viewers: "))
+    viewing_time = float(input("Enter viewing time (in hours): "))
+    channel = TVChannel(name, viewers, viewing_time)
+    channels.append(channel)
+
+# Sort the channels based on the number of viewers
+channels.sort(key=lambda x: x.rate_channel(), reverse=True)
+
+# Print the sorted list of channels
+print("Channels sorted by viewership:")
+for channel in channels:
+    print(f"Channel: {channel.name} - Viewers: {channel.viewers} - Viewing Time: {channel.viewing_time} hours")
