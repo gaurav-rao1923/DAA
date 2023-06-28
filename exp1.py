@@ -1,3 +1,8 @@
+# Design an application to create list of Tv channels (minimum 10) that includes number of viewers and viewing time. 
+# Rate the channels based on number of viewers and(1-high 6-low).
+# Plot graphs to analyze the running time of diffrent sorting algorithms.
+
+
 import matplotlib.pyplot as plt
 import time
 import random
